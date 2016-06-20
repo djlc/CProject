@@ -6,7 +6,7 @@ int main() {
 	printf("aのアドレスは%p\n", &a);
 	printf("bのアドレスは%p\n", &b);
 	*b = 20;
-	*(b+sizeof(int)) = 30;
+	*(b+sizeof(int)) = 40;
 	printf("b = %d\n", *b);
 	printf("b[0] = %d, b[1] = %d\n", *b, *(b+sizeof(int)));
 	return 0;
