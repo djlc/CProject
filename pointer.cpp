@@ -1,13 +1,10 @@
 #include <stdio.h>
 
 int main() {
-	int a = 10;
-	int* b;
-	printf("aのアドレスは%p\n", &a);
-	printf("bのアドレスは%p\n", &b);
-	*b = 20;
-	*(b+sizeof(int)) = 40;
-	printf("b = %d\n", *b);
-	printf("b[0] = %d, b[1] = %d\n", *b, *(b+sizeof(int)));
+	int *b = new int[100000];
+	for (int i = 0; i < 100000; i++) {
+		*(b+i) = i;
+		printf("b[%d] = %d,\t *(b+%d) = %d\n", i, b[i], i, *(b+i));
+	}
 	return 0;
 }
